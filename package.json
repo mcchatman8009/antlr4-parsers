@@ -1,0 +1,51 @@
+{
+  "name": "antlr4-parsers",
+  "version": "1.0.0",
+  "description": "A collection of ready to go Antlr4 built parsers",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "cp -r ./src/parser dist && tsc -w",
+    "clean": "rm -fr dist node_modules",
+    "build-json": "antlr4-tool -o dist/json src/json/grammar/JSON.g4 && cp -r src/json/grammar dist/json",
+    "build-yaml": "antlr4-tool -o dist/yaml src/yaml/grammar/YAML.g4 && tsc  --outDir ./dist/yaml && cp -r src/yaml/grammar dist/yaml",
+    "lint": "tslint -p . -c tslint.json 'src/**/*.ts'",
+    "build-grammars": "./build-grammars.sh"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "docs"
+  ],
+  "keywords": [
+    "YAML",
+    "JSON",
+    "ANTLR4",
+    "parsers",
+    "antlr4",
+    "es5",
+    "es6",
+    "dsl",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mcchatman8009/antlr4-parsers"
+  },
+  "author": {
+    "name": "Marlon Chatman",
+    "email": "mcchatman8009@gmail.com"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "antlr4": "^4.7.1",
+    "lodash": "^4.17.10"
+  },
+  "devDependencies": {
+    "@types/antlr4": "^4.7.0",
+    "antlr4-tool": "^1.0.20",
+    "@types/lodash": "^4.14.116",
+    "@types/node": "^10.5.3",
+    "tslint": "^5.11.0",
+    "typescript": "^2.9.2"
+  }
+}
