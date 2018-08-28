@@ -1,6 +1,6 @@
 {
   "name": "antlr4-parsers",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A collection of ready to go Antlr4 built parsers",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,7 +12,7 @@
     "build-grammars": "./build-grammars.sh"
   },
   "files": [
-    "dist",
+    "**/*",
     "LICENSE",
     "docs"
   ],
